@@ -1,0 +1,55 @@
+The method df.loc[] is a label-based accessor in PANDAS, used to select rows and columns by name (not by number).
+
+✅ Meaning of df.loc[]
+It is used like this:
+df.loc[row_label, column_label]
+row_label = the label of the row (like an index name or number)
+column_label = the column name
+
+🔍 Examples:
+1. Select a row by index label:
+df.loc[0]
+→ Returns the row where the index is 0.
+
+2. Select a specific cell:
+df.loc[0, 'Name']
+→ Returns the value in row 0, column "Name".
+
+3. Select multiple rows and columns
+df.loc[[0, 1], ['Name', 'Genre']]
+→ Returns rows 0 and 1, and only the "Name" and "Genre" columns.
+
+4. Select rows with a condition:
+df.loc[df['Genre'] == 'Action']
+→ Returns all rows where "Genre" is "Action".
+
+
+ILOC[]
+df.iloc[] is a position-based indexer in pandas. It allows you to access rows and columns by their integer position — similar to how you’d index a list or NumPy array.
+
+✅ Meaning of df.iloc[]
+It’s used like this:
+df.iloc[row_index, column_index]
+row_index = position of the row (starting at 0)
+column_index = position of the column (starting at 0)
+
+🔍 Examples:
+1. Select a single row:
+df.iloc[0]
+→ Returns the first row (index 0).
+
+2. Select a single cell:
+df.iloc[0, 1]
+→ Returns the value in the first row, second column.
+
+3. Select multiple rows and columns:
+df.iloc[0:3, 1:4]
+→ Returns rows 0 to 2, and columns 1 to 3 (end-exclusive like Python slices).
+
+4. Select entire column:
+df.iloc[:, 2]
+→ Returns the entire 3rd column.
+
+5. Select entire row:
+df.iloc[2, :]
+→ Returns the 3rd row.
